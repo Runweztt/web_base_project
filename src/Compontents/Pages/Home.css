@@ -74,5 +74,25 @@
   height: auto;
   aspect-ratio: 1/1;
   object-fit: cover;
+  border-radius: 20px;
     
+}
+
+.search-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.searchitem {
+  margin-bottom: 1rem;
+}
+.searchitem input {
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+}
+.searchitem button {
+  padding: 0.5rem 1rem;
 }

@@ -8,75 +8,76 @@ import './Home.css'
 
 function Home() {
     const workspaces = [
-  {
-    name: "Marketing Hub",
-    description: "Collaborate on creative strategies and campaigns in a vibrant environment.",
-    availability: "Available"
-  },
-  {
-    name: "Design Studio",
-    description: "Perfect for visual thinkers. Equipped with creative tools and whiteboards.",
-    availability: "Fully Booked"
-  },
-  {
-    name: "Developer Den",
-    description: "Ideal for coding sprints, system architecture, and product building.",
-    availability: "Available"
-  },
-  {
-    name: "Startup Bay",
-    description: "Flexible space for small teams launching their next big thing.",
-    availability: "Limited"
-  },
-  {
-    name: "Executive Suite",
-    description: "Premium setup for executives and client meetings.",
-    availability: "Available"
-  },
-  {
-    name: "Quiet Pods",
-    description: "Noise-free workspaces for deep focus and uninterrupted productivity.",
-    availability: "Available"
-  },
-  {
-    name: "Co-Lab Area",
-    description: "Shared space for open collaboration between teams and individuals.",
-    availability: "Fully Booked"
-  },
-  {
-    name: "Content Corner",
-    description: "Tailored for creators: record, edit, and publish in one space.",
-    availability: "Limited"
-  },
-  {
-    name: "Client Lounge",
-    description: "Designed for client onboarding, demos, and presentations.",
-    availability: "Available"
-  },
-  {
-    name: "Remote Room",
-    description: "Plug-and-play cabins for remote workers needing privacy and quiet.",
-    availability: "Available"
-  }
-]
+        {
+            name: "Marketing Hub",
+            description: "Collaborate on creative strategies and campaigns in a vibrant environment.",
+            availability: "Available"
+        },
+        {
+            name: "Design Studio",
+            description: "Perfect for visual thinkers. Equipped with creative tools and whiteboards.",
+            availability: "Fully Booked"
+        },
+        {
+            name: "Developer Den",
+            description: "Ideal for coding sprints, system architecture, and product building.",
+            availability: "Available"
+        },
+        {
+            name: "Startup Bay",
+            description: "Flexible space for small teams launching their next big thing.",
+            availability: "Limited"
+        },
+        {
+            name: "Executive Suite",
+            description: "Premium setup for executives and client meetings.",
+            availability: "Available"
+        },
+        {
+            name: "Quiet Pods",
+            description: "Noise-free workspaces for deep focus and uninterrupted productivity.",
+            availability: "Available"
+        },
+        {
+            name: "Co-Lab Area",
+            description: "Shared space for open collaboration between teams and individuals.",
+            availability: "Fully Booked"
+        },
+        {
+            name: "Content Corner",
+            description: "Tailored for creators: record, edit, and publish in one space.",
+            availability: "Limited"
+        },
+        {
+            name: "Client Lounge",
+            description: "Designed for client onboarding, demos, and presentations.",
+            availability: "Available"
+        },
+        {
+            name: "Remote Room",
+            description: "Plug-and-play cabins for remote workers needing privacy and quiet.",
+            availability: "Available"
+        }
+    ]
 
- const [searchinput, setSearchinput] = useState("")
- const [searclist, setSearchlist] = useState([])
+    const [searchinput, setSearchinput] = useState("")
+    const [searchlist, setSearchlist] = useState([])
 
- const handleChange =(e)=>{
-    setSearchinput(e.target.value)
- }
+    const handleChange = (e) => {
+        setSearchinput(e.target.value)
+    }
 
- const submitChange = ()=>{
-    const filterd = workspaces.filter(items => 
-        items.case.toLowerCase() === searchinput.toLowerCase());
+    const submitChange = () => {
+        const filterd = workspaces.filter(item =>
+            item.name.toLowerCase() === searchinput.toLowerCase());
         setSearchlist(filterd)
- }
+         setSearchinput(""); 
+    }
 
- const handleRemove = (index) => {
-    setSearchlist(remov => remov.filter((_, i)=> i !== index))
 
- }
+    const handleRemove = (index) => {
+        setSearchlist(prev => prev.filter((_, i) => i !== index))
+    }
 
     const [color, setColor] = useState('linear-gradient(to bottom, #ff7e5f, rgb(158, 106, 66))')
 
@@ -149,15 +150,35 @@ function Home() {
             </div>
 
 
-            <div className='workspace'>
-                
-                <div>
-                    <label> enter search input</label>
-                    <input type="text" value={searchinput} onChange={handleChange} placeholder='search items..............' />
-                    <button onClick={submitChange}>search</button>
+            <div className='search-container'>
+                <div className='searchitem'>
+                    <label>Enter search input</label>
+                    <input
+                        type="text"
+                        value={searchinput}
+                        onChange={handleChange}
+                        placeholder='Search workspaces...'
+                        onKeyDown={(e) => e.key === 'Enter' && submitChange()}
+                    />
+                    <button onClick={submitChange}>Search</button>
                 </div>
 
+                <div className='searchitem'>
+                    {searchlist.length > 0 ? (
+                        <ul>
+                            {searchlist.map((item, index) => (
+                                <li key={index}>
+                                    <strong>{item.name}</strong> – {item.description} ({item.availability})
+                                    <button onClick={() => handleRemove(index)}>Remove</button>
+                                </li>
+                            ))}
+                        </ul>
+                    ) : (
+                        <p>No data found</p>
+                    )}
+                </div>
             </div>
+
         </>
     )
 }
