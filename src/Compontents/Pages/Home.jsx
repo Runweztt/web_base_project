@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Home.css';
+import { FaTimes } from 'react-icons/fa';
 
 import workspace1 from '../../assets/workspace1.jpg';
 import workspace2 from '../../assets/workspace2.jpg';
@@ -109,7 +110,7 @@ function Home() {
                   <span className={`availability ${space.availability === 'Available' ? 'green' : 'red'}`}>
                     {space.availability}
                   </span>
-                  <button onClick={() => deleteItem(index)} className='remove-button'>Remove</button>
+                  <button onClick={() => deleteItem(index)} className='remove-button'><FaTimes /> </button>
                 </div>
               ))
             ) : (
@@ -118,6 +119,38 @@ function Home() {
           </div>
         )}
       </div>
+
+
+
+
+
+
+
+
+
+
+      <div className="benefits-section">
+  <h2>Why Choose Our Workspaces?</h2>
+  <div className="benefits-grid">
+    <div className="benefit-card">
+      <h3>24/7 Access</h3>
+      <p>Work on your schedule, anytime.</p>
+    </div>
+    <div className="benefit-card">
+      <h3>Fast Wi-Fi</h3>
+      <p>Enjoy uninterrupted, high-speed internet.</p>
+    </div>
+    <div className="benefit-card">
+      <h3>Community Events</h3>
+      <p>Network and learn through frequent events.</p>
+    </div>
+    <div className="benefit-card">
+      <h3>Flexible Plans</h3>
+      <p>Hourly, daily, or monthly options to suit you.</p>
+    </div>
+  </div>
+</div>
+
     </>
   );
 }
