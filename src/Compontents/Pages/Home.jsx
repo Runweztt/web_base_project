@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Home.css';
-import { FaTimes,FaClock, FaWifi, FaUsers, FaHandshake  } from 'react-icons/fa';
+import { FaTimes, FaClock, FaWifi, FaUsers, FaHandshake } from 'react-icons/fa';
 
 
 import workspace1 from '../../assets/workspace1.jpg';
@@ -58,7 +58,7 @@ function Home() {
   };
 
 
-  
+
 
   return (
     <>
@@ -129,54 +129,57 @@ function Home() {
 
 
 
+      <div className="benefits-section">
+        <h2>Why Choose Our Workspaces?</h2>
+        <p className="benefits-intro">
+          Whether you're a solo entrepreneur, a growing startup, or a remote team, our workspaces are designed to help you thrive. Here's what sets us apart:
+        </p>
+        <div className="benefits-grid">
+          <div className="benefit-card">
+            <FaClock className="benefit-icon" />
+            <h3>24/7 Access</h3>
+            <p>
+              Work when inspiration strikes. Our facilities are open around the clock, so you can maximise productivity on your terms — day or night.
+            </p>
+          </div>
+          <div className="benefit-card">
+            <FaWifi className="benefit-icon" />
+            <h3>Blazing Fast Wi-Fi</h3>
+            <p>
+              Stay connected with our secure, high-speed internet designed for seamless meetings, uploads, and remote work without a single hiccup.
+            </p>
+          </div>
+          <div className="benefit-card">
+            <FaUsers className="benefit-icon" />
+            <h3>Vibrant Community Events</h3>
+            <p>
+              From workshops to networking mixers, we host regular events that foster collaboration, learning, and meaningful professional connections.
+            </p>
+          </div>
+          <div className="benefit-card">
+            <FaHandshake className="benefit-icon" />
+            <h3>Flexible Membership Plans</h3>
+            <p>
+              Choose from hourly, daily, weekly, or monthly passes to match your unique workflow. No long-term contracts. Just flexibility.
+            </p>
+          </div>
+        </div>
+      </div>
 
 
 
 
-
-
-   
-
-<div className="benefits-section">
-  <h2>Why Choose Our Workspaces?</h2>
-  <p className="benefits-intro">
-    Whether you're a solo entrepreneur, a growing startup, or a remote team, our workspaces are designed to help you thrive. Here's what sets us apart:
+       <div className="newsletter-section">
+  <h2>Stay in the Loop</h2>
+  <p>
+    Get the latest workspace updates, exclusive deals, and productivity tips straight to your inbox.
+    No spam just useful content, once a week.
   </p>
-  <div className="benefits-grid">
-    <div className="benefit-card">
-      <FaClock className="benefit-icon" />
-      <h3>24/7 Access</h3>
-      <p>
-        Work when inspiration strikes. Our facilities are open around the clock, so you can maximise productivity on your terms — day or night.
-      </p>
-    </div>
-    <div className="benefit-card">
-      <FaWifi className="benefit-icon" />
-      <h3>Blazing Fast Wi-Fi</h3>
-      <p>
-        Stay connected with our secure, high-speed internet designed for seamless meetings, uploads, and remote work without a single hiccup.
-      </p>
-    </div>
-    <div className="benefit-card">
-      <FaUsers className="benefit-icon" />
-      <h3>Vibrant Community Events</h3>
-      <p>
-        From workshops to networking mixers, we host regular events that foster collaboration, learning, and meaningful professional connections.
-      </p>
-    </div>
-    <div className="benefit-card">
-      <FaHandshake className="benefit-icon" />
-      <h3>Flexible Membership Plans</h3>
-      <p>
-        Choose from hourly, daily, weekly, or monthly passes to match your unique workflow. No long-term contracts. Just flexibility.
-      </p>
-    </div>
-  </div>
+  <form className="newsletter-form">
+    <input type="email" placeholder="Enter your email address" required />
+    <button type="submit" className="btn">Subscribe</button>
+  </form>
 </div>
-
-
-
-
 
 
 
