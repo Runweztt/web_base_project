@@ -62,6 +62,8 @@ function Home() {
 
   return (
     <>
+
+    {/* home section */}
       <div className="hero-section">
         <div className="hero-content">
           <h1>Discover The True WorkSpace</h1>
@@ -74,7 +76,9 @@ function Home() {
             <button className="btn btn-outline">Book a Tour</button>
           </div>
         </div>
-      </div>
+      </div> 
+
+      {/* workspace display section  */}
 
       <div className="workspace-section">
         <h2>Our Workspaces</h2>
@@ -90,7 +94,9 @@ function Home() {
           ))}
         </div>
       </div>
+       
 
+       {/* wprkspace search section  */}
       <div className="search-section">
         <h2>Search for Workspace</h2>
         <div className="search-bar">
@@ -103,7 +109,8 @@ function Home() {
           />
           <button onClick={submitChange}>Search</button>
         </div>
-
+             
+             {/* workspace search display section  */}
         {hasSearched && (
           <div className="search-results">
             {searchResults.length > 0 ? (
@@ -127,7 +134,7 @@ function Home() {
       </div>
 
 
-
+         {/* workspace benefit of working with us section  */}
 
       <div className="benefits-section">
         <h2>Why Choose Our Workspaces?</h2>
@@ -167,7 +174,7 @@ function Home() {
       </div>
 
 
-
+   {/* workspace newletter section  */}
 
        <div className="newsletter-section">
   <h2>Stay in the Loop</h2>

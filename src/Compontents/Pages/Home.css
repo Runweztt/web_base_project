@@ -1,4 +1,6 @@
 /* Home.css */
+  
+
 
 body {
   margin: 0;
@@ -6,6 +8,8 @@ body {
   background-color: #f9f9f9;
   color: #222;
 }
+
+/* workspace hero section styles  */
 
 .hero-section {
   background: linear-gradient(to right, #4a00e0, #8e2de2);
@@ -63,6 +67,7 @@ body {
   color: #4a00e0;
 }
 
+   /* workspace display section styles  */
 .workspace-section {
   padding: 60px 20px;
   text-align: center;
@@ -125,6 +130,8 @@ body {
   color: red;
 }
 
+
+   /* wprkspace search section styles  */
 .search-section {
   padding: 60px 20px;
   background-color: #f0f0f0;
@@ -174,6 +181,8 @@ body {
   background-color: #5f26e8;
 }
 
+ /* workspace search display section styles  */
+
 .search-results {
   max-width: 800px;
   margin: 0 auto;
@@ -192,7 +201,7 @@ body {
 }
 
 
-
+ /* workspace benefit of working with us section styles  */
 .benefits-section {
   padding: 4rem 2rem;
   background-color: #f9f9f9;
@@ -248,6 +257,8 @@ body {
   color: #666;
 }
 
+
+/* workspace newletter section  styles  */
 
 .newsletter-section {
   background: #f4f4f4;
