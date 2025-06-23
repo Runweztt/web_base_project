@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import './Home.css';
 import { FaTimes, FaClock, FaWifi, FaUsers, FaHandshake } from 'react-icons/fa';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 
 import workspace1 from '../../assets/workspace1.jpg';
@@ -32,6 +36,39 @@ const allWorkspaces = [
     image: workspace4,
     description: 'Dive into analytics and machine learning projects with powerful resources.',
     availability: 'Not Available'
+  }
+];
+
+const testimonials = [
+  {
+    name: 'Ada Obasi',
+    review: 'WorkNest gave our startup the creative energy we were missing. It’s more than just a space — it’s a vibe.',
+    role: 'Marketing Lead, ZediTech'
+  },
+  {
+    name: 'Emmanuel Dafe',
+    review: '24/7 access and reliable internet made it the best place to finish our MVP in peace.',
+    role: 'Developer, NuSoft'
+  },
+  {
+    name: 'Rita George',
+    review: 'I met two of my current clients during a community event. The networking alone is worth it.',
+    role: 'Freelance Designer'
+  },
+  {
+    name: 'David Olaniyi',
+    review: 'The flexible monthly plan helped our team grow without stress. Clean, safe, and super friendly staff.',
+    role: 'CEO, FloatSync'
+  },
+  {
+    name: 'Esther Anene',
+    review: 'Being around other remote workers helped me stay productive and accountable.',
+    role: 'Remote Virtual Assistant'
+  },
+  {
+    name: 'Joseph Atuma',
+    review: 'I recorded all my online courses from here. Zero noise, fast uploads, and comfy space.',
+    role: 'Content Creator'
   }
 ];
 
@@ -172,6 +209,39 @@ function Home() {
           </div>
         </div>
       </div>
+
+
+{/* testimonial section  */}
+        
+
+           <div className="testimonial-section">
+       <h2>What Our Renters Say</h2>
+      <Swiper
+        modules={[Pagination, Autoplay]}
+        spaceBetween={30}
+        loop={true}
+        autoplay={{ delay: 6000 }}
+        pagination={{ clickable: true }}
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          }
+        }}
+      >
+        {testimonials.map((item, index) => (
+          <SwiperSlide key={index}>
+            <div className="testimonial-card">
+              <p className="review">“{item.review}”</p>
+              <h4>{item.name}</h4>
+              <small>{item.role}</small>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
 
 
    {/* workspace newletter section  */}
