@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Home.css';
 import { FaTimes, FaClock, FaWifi, FaUsers, FaHandshake } from 'react-icons/fa';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Autoplay } from 'swiper/modules';
+import { Pagination, Autoplay,EffectFade } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
@@ -100,7 +100,7 @@ function Home() {
   return (
     <>
 
-    {/* home section */}
+      {/* home section */}
       <div className="hero-section">
         <div className="hero-content">
           <h1>Discover The True WorkSpace</h1>
@@ -113,7 +113,7 @@ function Home() {
             <button className="btn btn-outline">Book a Tour</button>
           </div>
         </div>
-      </div> 
+      </div>
 
       {/* workspace display section  */}
 
@@ -131,9 +131,9 @@ function Home() {
           ))}
         </div>
       </div>
-       
 
-       {/* wprkspace search section  */}
+
+      {/* wprkspace search section  */}
       <div className="search-section">
         <h2>Search for Workspace</h2>
         <div className="search-bar">
@@ -146,8 +146,8 @@ function Home() {
           />
           <button onClick={submitChange}>Search</button>
         </div>
-             
-             {/* workspace search display section  */}
+
+        {/* workspace search display section  */}
         {hasSearched && (
           <div className="search-results">
             {searchResults.length > 0 ? (
@@ -171,7 +171,7 @@ function Home() {
       </div>
 
 
-         {/* workspace benefit of working with us section  */}
+      {/* workspace benefit of working with us section  */}
 
       <div className="benefits-section">
         <h2>Why Choose Our Workspaces?</h2>
@@ -211,52 +211,54 @@ function Home() {
       </div>
 
 
-{/* testimonial section  */}
-        
-
-           <div className="testimonial-section">
-       <h2>What Our Renters Say</h2>
-      <Swiper
-        modules={[Pagination, Autoplay]}
-        spaceBetween={30}
-        loop={true}
-        autoplay={{ delay: 6000 }}
-        pagination={{ clickable: true }}
-        breakpoints={{
-          0: {
-            slidesPerView: 1,
-          },
-          768: {
-            slidesPerView: 2,
-          }
-        }}
-      >
-        {testimonials.map((item, index) => (
-          <SwiperSlide key={index}>
-            <div className="testimonial-card">
-              <p className="review">“{item.review}”</p>
-              <h4>{item.name}</h4>
-              <small>{item.role}</small>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
+      {/* testimonial section  */}
 
 
-   {/* workspace newletter section  */}
+      <div className="testimonial-section">
+        <h2>What Our Renters Say</h2>
+        <Swiper
+          modules={[Pagination, Autoplay, EffectFade]}
+          spaceBetween={30}
+          effect="fade"
+          loop={true}
+          autoplay={{ delay: 8000 }}
+          fadeEffect={{ crossFade: true }}
+          // pagination={{ clickable: true }}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 2,
+            }
+          }}
+        >
+          {testimonials.map((item, index) => (
+            <SwiperSlide key={index}>
+              <div className="testimonial-card">
+                <p className="review">“{item.review}”</p>
+                <h4>{item.name}</h4>
+                <small>{item.role}</small>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
 
-       <div className="newsletter-section">
-  <h2>Stay in the Loop</h2>
-  <p>
-    Get the latest workspace updates, exclusive deals, and productivity tips straight to your inbox.
-    No spam just useful content, once a week.
-  </p>
-  <form className="newsletter-form">
-    <input type="email" placeholder="Enter your email address" required />
-    <button type="submit" className="btn">Subscribe</button>
-  </form>
-</div>
+
+      {/* workspace newletter section  */}
+
+      <div className="newsletter-section">
+        <h2>Stay in the Loop</h2>
+        <p>
+          Get the latest workspace updates, exclusive deals, and productivity tips straight to your inbox.
+          No spam just useful content, once a week.
+        </p>
+        <form className="newsletter-form">
+          <input type="email" placeholder="Enter your email address" required />
+          <button type="submit" className="btn">Subscribe</button>
+        </form>
+      </div>
 
 
 
