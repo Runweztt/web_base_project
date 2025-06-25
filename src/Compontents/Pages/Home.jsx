@@ -216,33 +216,26 @@ function Home() {
 
       <div className="testimonial-section">
         <h2>What Our Renters Say</h2>
-        <Swiper
-          modules={[Pagination, Autoplay, EffectFade]}
-          spaceBetween={30}
-          effect="fade"
-          loop={true}
-          autoplay={{ delay: 8000 }}
-          fadeEffect={{ crossFade: true }}
-          // pagination={{ clickable: true }}
-          breakpoints={{
-            0: {
-              slidesPerView: 1,
-            },
-            768: {
-              slidesPerView: 2,
-            }
-          }}
-        >
-          {testimonials.map((item, index) => (
-            <SwiperSlide key={index}>
-              <div className="testimonial-card">
-                <p className="review">“{item.review}”</p>
-                <h4>{item.name}</h4>
-                <small>{item.role}</small>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+         <Swiper
+        modules={[Pagination, Autoplay, EffectFade]}
+        spaceBetween={30}
+        effect="fade"
+        loop={true}
+        autoplay={{ delay: 5000 }}
+        fadeEffect={{ crossFade: true }}
+        slidesPerView={1} // Required for fade to work
+        pagination={{ clickable: true }}
+      >
+        {testimonials.map((item, index) => (
+          <SwiperSlide key={index}>
+            <div className="testimonial-card">
+              <p className="review">“{item.review}”</p>
+              <h4>{item.name}</h4>
+              <small>{item.role}</small>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
       </div>
 
 
