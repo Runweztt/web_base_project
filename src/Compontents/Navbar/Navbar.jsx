@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './Navbar.css';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom'
+import logoimg from '../../assets/logoimg.png'
+
 
 function Navbar() {
       const [navOpen, setNavOpen] = useState(false);
@@ -14,7 +16,7 @@ function Navbar() {
     <>
        <header>
         <nav className={`nav ${navOpen ? 'open' : ''}`}>
-            <img src="" alt="logo" />
+            <img src={logoimg} alt="logo" />
 
             <ul>
                 <NavLink to='/'><li>Home</li></NavLink>

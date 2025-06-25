@@ -223,7 +223,7 @@ function Home() {
         loop={true}
         autoplay={{ delay: 5000 }}
         fadeEffect={{ crossFade: true }}
-        slidesPerView={1} // Required for fade to work
+        slidesPerView={1} 
         pagination={{ clickable: true }}
       >
         {testimonials.map((item, index) => (
