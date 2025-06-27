@@ -13,9 +13,9 @@
   margin: 0 auto;
 }
 
-.footer-logo h2 {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
+.footer-logo img {
+  width: 100px;
+  height: auto;
 }
 
 .footer-links ul,
@@ -50,7 +50,7 @@
 }
 
 .footer-socials a:hover {
-  background: #666;
+  background: #8e2de2;
 }
 
 .footer-bottom {

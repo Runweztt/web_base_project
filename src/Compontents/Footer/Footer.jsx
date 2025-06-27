@@ -1,13 +1,15 @@
 import React from 'react';
 import './Footer.css';
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
+import logoimg from '../../assets/logoimg.png'
 
 function Footer() {
   return (
     <footer className="site-footer">
       <div className="footer-container">
         <div className="footer-logo">
-          <h2>WorkNest</h2>
+        
+            <img src={logoimg} alt="logo" />
           <p>Empowering creators, teams & remote professionals through premium workspaces.</p>
         </div>
 

@@ -8,3 +8,30 @@
   text-align: center;
   height: 80vh;
 }
+
+.product-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8e2de2;
+  
+  
+
+}
+
+.product-grid{
+  display: grid;
+  grid-template-columns: 400px  400px 200px  minmax(200px, auto);
+  grid-template-rows:400px 400px 400px  ;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  
+}
+.product-service {
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+ 
+}
+

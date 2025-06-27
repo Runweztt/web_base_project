@@ -17,7 +17,23 @@ function Product() {
         </div>
       </div>
 
+      
 
+      <div className='product-container'>
+        <div className='product-grid'>
+
+           <div className='product-service'> image </div>
+           <div className='product-service'> image </div>
+           <div className='product-service'> image </div>
+           <div className='product-service'> image </div>
+           <div className='product-service'> image </div>
+           <div className='product-service'> image </div>
+           
+
+
+
+        </div>
+      </div>
 
 
     </>
