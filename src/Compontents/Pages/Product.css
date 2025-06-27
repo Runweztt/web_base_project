@@ -1,37 +1,107 @@
-
-
-
-.hero-section-product {
-  background: linear-gradient(to right, #4a00e0, #8e2de2);
-  color: #fff;
-  padding: 80px 20px;
-  text-align: center;
-  height: 80vh;
+.product-page {
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.product-container{
+/* Hero Section */
+.hero-section {
+  background-image: url('../../assets/proimg11.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  max-width: 700px;
+  margin-inline: auto;
+}
+
+.hero-buttons {
   display: flex;
   justify-content: center;
-  align-items: center;
-  background-color: #8e2de2;
-  
-  
-
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-.product-grid{
+.btn1,
+.btn2 {
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.btn1 {
+  background-color: #222;
+  color: #fff;
+}
+
+.btn2 {
+  background-color: #fff;
+  color: #222;
+  border: 2px solid #222;
+}
+
+/* Grid Section */
+.workspace-grid {
+  padding: 60px 20px;
   display: grid;
-  grid-template-columns: 400px  400px 200px  minmax(200px, auto);
-  grid-template-rows:400px 400px 400px  ;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-  
-}
-.product-service {
-  background: white;
-  padding: 10px;
-  border-radius: 8px;
- 
 }
 
+.workspace-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.workspace-card:hover {
+  transform: translateY(-5px);
+}
+
+.workspace-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.workspace-card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.4rem;
+}
+
+.workspace-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.book-btn {
+  background-color: #222;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.book-btn:hover {
+  background-color: #444;
+}
