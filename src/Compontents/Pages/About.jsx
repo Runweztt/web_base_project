@@ -24,10 +24,10 @@ function About() {
       <section className="about-section">
         <h2>Why Choose Us?</h2>
         <ul>
-          <li>✨ Variety of spaces to suit your working style – from open desks to private suites.</li>
-          <li>🚀 High-speed WiFi, meeting rooms, coffee bar, printing and more.</li>
-          <li>🌍 Vibrant community events and networking opportunities.</li>
-          <li>🔐 Flexible booking options – daily, weekly or monthly.</li>
+          <li> Variety of spaces to suit your working style – from open desks to private suites.</li>
+          <li> High-speed WiFi, meeting rooms, coffee bar, printing and more.</li>
+          <li> Vibrant community events and networking opportunities.</li>
+          <li> Flexible booking options – daily, weekly or monthly.</li>
         </ul>
       </section>
 
