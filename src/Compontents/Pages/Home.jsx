@@ -76,11 +76,11 @@ function Home() {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [hasSearched, setHasSearched] = useState(false);
-
+  //  handle input form 
   const handleChange = (e) => {
     setSearchTerm(e.target.value);
   };
-
+    // search and filter function 
   const submitChange = () => {
     const results = allWorkspaces.filter((space) =>
       space.name.toLowerCase() === searchTerm.toLowerCase()
@@ -89,7 +89,7 @@ function Home() {
     setHasSearched(true);
     setSearchTerm('')
   };
-
+    // delete button 
   const deleteItem = (index) => {
     setSearchResults(prev => prev.filter((_, i) => i !== index));
   };
@@ -101,7 +101,7 @@ function Home() {
     <>
 
       {/* home section */}
-      <div className="hero-section">
+      <div className="hero-section-main">
         <div className="hero-content">
           <h1>Discover The True WorkSpace</h1>
           <p>
@@ -159,6 +159,7 @@ function Home() {
                     {space.availability}
                   </span>
                   <br />
+
                   <button onClick={() => deleteItem(index)} className='remove-button'><FaTimes /> </button>
                   <button className='remove-button'>Book now</button>
                 </div>
@@ -211,7 +212,7 @@ function Home() {
       </div>
 
 
-      {/* testimonial section  */}
+      {/* testimonial section with swipter  */}
 
 
       <div className="testimonial-section">
