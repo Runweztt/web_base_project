@@ -20,9 +20,9 @@ function App() {
       <Route path='About' element={<About />} />
     </Route>
   ),
-  {
-    basename: '/web_base_project' // 
-  }
+  // {
+  //   basename: '/web_base_project' // 
+  // }
 )
 
     
