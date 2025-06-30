@@ -74,6 +74,7 @@ function Product() {
           </div>
         ))}
       </div>
+      
       {/* Popup Form */}
       {showModal && (
         <div className="modal-overlay">

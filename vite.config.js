@@ -5,6 +5,6 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [
     react(),
-    tailwindcss(), // comma added here
-  ],
+    tailwindcss(),],
+     base: process.env.VITE_BASE_PATH || "/web_base_project"
 })
