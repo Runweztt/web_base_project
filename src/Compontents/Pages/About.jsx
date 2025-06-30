@@ -8,7 +8,7 @@ function About() {
       {/* Hero Section */}
       <section className="about-hero">
         <h1>About Us</h1>
-        <p>We’re more than just a workspace – we’re a community for creators, founders, and remote professionals.</p>
+        <p>We’re more than just a workspace we’re a community for creators, founders, and remote professionals.</p>
       </section>
 
       {/* Mission & Vision */}

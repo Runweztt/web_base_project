@@ -21,8 +21,8 @@ body {
   height: 100vh;
 }
 .hero-content{
-    margin-top: 60px;
-     background-color: rgba(0, 0, 0, 0.5);
+  margin-top: 60px;
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 30px;
   border-radius: 12px;
   display: inline-block;

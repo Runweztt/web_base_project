@@ -5,6 +5,7 @@
 }
 
 .about-hero {
+  position: relative;
   background: url('../../assets/proimg5.jpg') center/cover no-repeat;
   height: 60vh;
   display: flex;
@@ -13,6 +14,24 @@
   text-align: center;
   color: white;
   padding: 40px 20px;
+  z-index: 0;
+}
+
+.about-hero::before {
+  content: '';
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.about-hero h1,
+.about-hero p {
+  position: relative;
+  z-index: 2;
 }
 
 .about-hero h1 {

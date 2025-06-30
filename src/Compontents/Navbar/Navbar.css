@@ -1,20 +1,41 @@
-/* Navbar.css */
-
+/* === Base Styles === */
 header {
   position: sticky;
   top: 0;
-   background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: 999;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  
 }
 
+/* Logo */
+header img {
+  width: 70px;
+  height: auto;
+  z-index: 1001;
+}
+
+/* Toggle Button */
+.nav-toggle-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Desktop Navigation */
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
-  padding: 1rem 2rem;
-  margin: auto;
+  gap: 2rem;
   transition: all 0.3s ease;
 }
 
@@ -37,12 +58,8 @@ header {
   color: #8e2de2;
 }
 
-.nav img {
-  width: 70px;
-  height: auto;
-}
-
-.btn1 {
+/* CTA Button */
+.btn4 {
   padding: 10px 20px;
   background: #8e2de2;
   border: none;
@@ -57,32 +74,29 @@ header {
   background: #4a00e0;
 }
 
-.nav-toggle-btn {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 26px;
-  color: #333;
-  position: absolute;
-  top: 18px;
-  right: 20px;
-  z-index: 1001;
-  cursor: pointer;
-}
-
-/* ===== Responsive Menu ===== */
+/* === Responsive === */
 @media screen and (max-width: 768px) {
+  header {
+    justify-content: space-between;
+  }
+
+  .nav-toggle-btn {
+    display: block;
+  }
+
   .nav {
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: rgba(0, 0, 0, 0.9);
-    padding-top: 60px;
-    height: 100vh;
     position: fixed;
     top: 0;
     right: -100%;
     width: 70%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5rem 2rem 2rem;
+    gap: 30px;
     transition: right 0.3s ease-in-out;
+    z-index: 1000;
   }
 
   .nav.open {
@@ -92,18 +106,17 @@ header {
   .nav ul {
     flex-direction: column;
     gap: 20px;
-    padding: 20px;
+    width: 100%;
+  }
+
+  .nav ul a {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 18px;
+    color: white;
   }
 
   .btn1 {
-    margin: 20px;
+    margin-top: 1rem;
   }
-
-  .nav-toggle-btn {
-    display: block;
-    color: white;
-  }
-  .nav img {
-  display: none;
-}
 }
