@@ -1,4 +1,4 @@
-/* === Base Styles === */
+
 header {
   position: sticky;
   top: 0;
@@ -74,7 +74,7 @@ header img {
   background: #4a00e0;
 }
 
-/* === Responsive === */
+
 @media screen and (max-width: 768px) {
   header {
     justify-content: space-between;
